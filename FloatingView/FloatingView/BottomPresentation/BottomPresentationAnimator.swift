@@ -1,14 +1,14 @@
 //
-//  SildeInPresentationAnimator.swift
+//  BottomPresentationAnimator.swift
 //  FloatingView
 //
-//  Created by Tran Thanh Vu on 5/24/20.
+//  Created by Yoyo on 5/25/20.
 //  Copyright © 2020 Socspy. All rights reserved.
 //
 
 import UIKit
 
-class SlideInPresentationAnimator: NSObject {
+class BottomPresentationAnimator: NSObject {
     let isPresentation: Bool
     
     init(isPresentation: Bool) {
@@ -17,7 +17,7 @@ class SlideInPresentationAnimator: NSObject {
     }
 }
 
-extension SlideInPresentationAnimator: UIViewControllerAnimatedTransitioning {
+extension BottomPresentationAnimator: UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }

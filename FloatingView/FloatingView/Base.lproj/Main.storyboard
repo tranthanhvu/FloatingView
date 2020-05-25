@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IgI-nk-kfM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,73 +7,103 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="aJT-63-7QB">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FloatingView" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IgI-nk-kfM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kLl-gR-N5y">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="H5X-oK-c6C" kind="relationship" relationship="viewControllers" id="X8k-xd-ZWt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yIV-x9-yC4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232" y="134"/>
+        </scene>
+        <!--Item1-->
+        <scene sceneID="4Hq-cH-bqy">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="H5X-oK-c6C" customClass="ViewController" customModule="FloatingView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VQu-6K-aBe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar7-lA-MMx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Raq-T1-AQw">
                                 <rect key="frame" x="188" y="44" width="38" height="30"/>
                                 <state key="normal" title="Show"/>
                                 <connections>
-                                    <action selector="showButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4T4-92-bIq"/>
+                                    <action selector="showButtonPressed:" destination="H5X-oK-c6C" eventType="touchUpInside" id="xHI-pH-Dnf"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvS-dA-0sp">
+                                <rect key="frame" x="155" y="96" width="104" height="30"/>
+                                <state key="normal" title="Toggle Passing"/>
+                                <connections>
+                                    <action selector="passingTouchEventButtonPressed:" destination="H5X-oK-c6C" eventType="touchUpInside" id="svp-Cb-lUI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wg-0q-ywH">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ar7-lA-MMx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DAZ-jC-rU3"/>
-                            <constraint firstItem="ar7-lA-MMx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mKR-v3-1Vd"/>
+                            <constraint firstItem="3wg-0q-ywH" firstAttribute="centerY" secondItem="VQu-6K-aBe" secondAttribute="centerY" id="NJG-ek-GMN"/>
+                            <constraint firstItem="DvS-dA-0sp" firstAttribute="top" secondItem="Raq-T1-AQw" secondAttribute="bottom" constant="22" id="bpM-9x-WOL"/>
+                            <constraint firstItem="Raq-T1-AQw" firstAttribute="top" secondItem="9yK-9f-gSw" secondAttribute="top" id="d5W-J4-YtU"/>
+                            <constraint firstItem="3wg-0q-ywH" firstAttribute="centerX" secondItem="VQu-6K-aBe" secondAttribute="centerX" id="ldY-Es-vJf"/>
+                            <constraint firstItem="Raq-T1-AQw" firstAttribute="centerX" secondItem="VQu-6K-aBe" secondAttribute="centerX" id="x05-7O-EvC"/>
+                            <constraint firstItem="DvS-dA-0sp" firstAttribute="centerX" secondItem="VQu-6K-aBe" secondAttribute="centerX" id="xj0-x5-Ewf"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="9yK-9f-gSw"/>
                     </view>
-                    <connections>
-                        <segue destination="VSa-sP-Tk6" kind="presentation" identifier="ToPresentedVCSegue" id="Qnt-22-6Yc"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="Item1" id="JrQ-Kv-Kqf"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D04-Ft-PNt" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="1048" y="134"/>
         </scene>
         <!--Presented View Controller-->
-        <scene sceneID="Y9i-XB-aFA">
+        <scene sceneID="1FF-ui-8F1">
             <objects>
-                <viewController storyboardIdentifier="PresentedViewController" id="VSa-sP-Tk6" customClass="PresentedViewController" customModule="FloatingView" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Edd-Cz-0Yw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                <viewController storyboardIdentifier="PresentedViewController" id="Y6C-MU-TiQ" customClass="PresentedViewController" customModule="FloatingView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W6u-XK-Nf4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BY9-IS-q9W">
-                                <rect key="frame" x="180" y="406" width="54" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b30-Br-91F">
+                                <rect key="frame" x="180" y="433" width="54" height="30"/>
                                 <state key="normal" title="Dismiss"/>
                                 <connections>
-                                    <action selector="dismissButtonPressed:" destination="VSa-sP-Tk6" eventType="touchUpInside" id="ugC-G0-lFw"/>
+                                    <action selector="dismissButtonPressed:" destination="Y6C-MU-TiQ" eventType="touchUpInside" id="zys-Me-ocK"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="BY9-IS-q9W" firstAttribute="centerY" secondItem="Edd-Cz-0Yw" secondAttribute="centerY" id="Hcr-68-EpM"/>
-                            <constraint firstItem="BY9-IS-q9W" firstAttribute="centerX" secondItem="Edd-Cz-0Yw" secondAttribute="centerX" id="QUi-Ky-exL"/>
+                            <constraint firstItem="b30-Br-91F" firstAttribute="centerY" secondItem="W6u-XK-Nf4" secondAttribute="centerY" id="E28-S0-45l"/>
+                            <constraint firstItem="b30-Br-91F" firstAttribute="centerX" secondItem="W6u-XK-Nf4" secondAttribute="centerX" id="ceX-FD-cY1"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="8sJ-4K-eff"/>
+                        <viewLayoutGuide key="safeArea" id="TEI-Dn-yx8"/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="Aa7-Zy-Sbn" appends="YES" id="gAV-kf-XpQ"/>
+                            <outletCollection property="gestureRecognizers" destination="8wf-I9-m9R" appends="YES" id="nYF-jG-t6E"/>
                         </connections>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nBW-dJ-tKl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="Aa7-Zy-Sbn">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9M-ME-fwS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="8wf-I9-m9R">
                     <connections>
-                        <action selector="panGestureRecognizerHandler:" destination="VSa-sP-Tk6" id="2pK-Vr-HOe"/>
+                        <action selector="panGestureRecognizerHandler:" destination="Y6C-MU-TiQ" id="o0R-fd-zAU"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="949" y="138"/>
+            <point key="canvasLocation" x="1858" y="134"/>
         </scene>
     </scenes>
 </document>

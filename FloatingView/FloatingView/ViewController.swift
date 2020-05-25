@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var slideInPresentionDelegate = SlideInPresentationDelegate()
+    var bottomPresentionDelegate = BottomPresentationDelegate(isPassingTouchEvent: true)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,15 +18,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "ToPresentedVCSegue", sender: nil)
+        if let presented = self.presentedViewController {
+            presented.removeFromParent()
+        }
+        
+        let vc = storyboard!.instantiateViewController(withIdentifier: "PresentedViewController")
+        vc.transitioningDelegate = bottomPresentionDelegate
+        vc.modalPresentationStyle = .custom
+        
+        vc.view.layer.cornerRadius = 10
+        
+        self.present(vc, animated: true, completion: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ToPresentedVCSegue" {
-            let controller = segue.destination
-            controller.transitioningDelegate = slideInPresentionDelegate
-            controller.modalPresentationStyle = .custom
-        }
+    @IBAction func passingTouchEventButtonPressed(_ sender: Any) {
+        bottomPresentionDelegate.isPassingTouchEvent = !bottomPresentionDelegate.isPassingTouchEvent
     }
 }
 

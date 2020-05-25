@@ -16,9 +16,9 @@
 		BE5231142479DD550029B18D /* FloatingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5231132479DD550029B18D /* FloatingViewTests.swift */; };
 		BE52311F2479DD550029B18D /* FloatingViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE52311E2479DD550029B18D /* FloatingViewUITests.swift */; };
 		BE52312E2479DE800029B18D /* PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE52312D2479DE800029B18D /* PresentedViewController.swift */; };
-		BE5231302479E4DA0029B18D /* SlideInPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE52312F2479E4DA0029B18D /* SlideInPresentationDelegate.swift */; };
-		BE5231322479E6750029B18D /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5231312479E6750029B18D /* SlideInPresentationController.swift */; };
-		BE5231342479E8DD0029B18D /* SildeInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5231332479E8DD0029B18D /* SildeInPresentationAnimator.swift */; };
+		BE8B4843247C166E00E18413 /* BottomPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8B4842247C166E00E18413 /* BottomPresentationAnimator.swift */; };
+		BE8B4845247C16C300E18413 /* BottomPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8B4844247C16C300E18413 /* BottomPresentationDelegate.swift */; };
+		BE8B4847247C16F700E18413 /* BottomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8B4846247C16F700E18413 /* BottomPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +54,9 @@
 		BE52311E2479DD550029B18D /* FloatingViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingViewUITests.swift; sourceTree = "<group>"; };
 		BE5231202479DD550029B18D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE52312D2479DE800029B18D /* PresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedViewController.swift; sourceTree = "<group>"; };
-		BE52312F2479E4DA0029B18D /* SlideInPresentationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationDelegate.swift; sourceTree = "<group>"; };
-		BE5231312479E6750029B18D /* SlideInPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
-		BE5231332479E8DD0029B18D /* SildeInPresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SildeInPresentationAnimator.swift; sourceTree = "<group>"; };
+		BE8B4842247C166E00E18413 /* BottomPresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPresentationAnimator.swift; sourceTree = "<group>"; };
+		BE8B4844247C16C300E18413 /* BottomPresentationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPresentationDelegate.swift; sourceTree = "<group>"; };
+		BE8B4846247C16F700E18413 /* BottomPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +107,10 @@
 		BE5230FB2479DD530029B18D /* FloatingView */ = {
 			isa = PBXGroup;
 			children = (
-				BE52312C2479DE6A0029B18D /* New Group */,
+				BE8B4841247C164400E18413 /* BottomPresentation */,
 				BE5230FC2479DD530029B18D /* AppDelegate.swift */,
 				BE5230FE2479DD530029B18D /* SceneDelegate.swift */,
+				BE52312D2479DE800029B18D /* PresentedViewController.swift */,
 				BE5231002479DD530029B18D /* ViewController.swift */,
 				BE5231022479DD530029B18D /* Main.storyboard */,
 				BE5231052479DD540029B18D /* Assets.xcassets */,
@@ -137,15 +138,14 @@
 			path = FloatingViewUITests;
 			sourceTree = "<group>";
 		};
-		BE52312C2479DE6A0029B18D /* New Group */ = {
+		BE8B4841247C164400E18413 /* BottomPresentation */ = {
 			isa = PBXGroup;
 			children = (
-				BE52312D2479DE800029B18D /* PresentedViewController.swift */,
-				BE52312F2479E4DA0029B18D /* SlideInPresentationDelegate.swift */,
-				BE5231312479E6750029B18D /* SlideInPresentationController.swift */,
-				BE5231332479E8DD0029B18D /* SildeInPresentationAnimator.swift */,
+				BE8B4842247C166E00E18413 /* BottomPresentationAnimator.swift */,
+				BE8B4844247C16C300E18413 /* BottomPresentationDelegate.swift */,
+				BE8B4846247C16F700E18413 /* BottomPresentationController.swift */,
 			);
-			path = "New Group";
+			path = BottomPresentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,10 +281,10 @@
 			files = (
 				BE5231012479DD530029B18D /* ViewController.swift in Sources */,
 				BE52312E2479DE800029B18D /* PresentedViewController.swift in Sources */,
-				BE5231302479E4DA0029B18D /* SlideInPresentationDelegate.swift in Sources */,
 				BE5230FD2479DD530029B18D /* AppDelegate.swift in Sources */,
-				BE5231342479E8DD0029B18D /* SildeInPresentationAnimator.swift in Sources */,
-				BE5231322479E6750029B18D /* SlideInPresentationController.swift in Sources */,
+				BE8B4845247C16C300E18413 /* BottomPresentationDelegate.swift in Sources */,
+				BE8B4847247C16F700E18413 /* BottomPresentationController.swift in Sources */,
+				BE8B4843247C166E00E18413 /* BottomPresentationAnimator.swift in Sources */,
 				BE5230FF2479DD530029B18D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5735V89Z5V;
 				INFOPLIST_FILE = FloatingView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,6 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5735V89Z5V;
 				INFOPLIST_FILE = FloatingView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
