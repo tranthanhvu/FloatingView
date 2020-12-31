@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IgI-nk-kfM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IgI-nk-kfM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,6 +15,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IgI-nk-kfM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kLl-gR-N5y">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -32,26 +35,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Raq-T1-AQw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Raq-T1-AQw">
                                 <rect key="frame" x="188" y="44" width="38" height="30"/>
                                 <state key="normal" title="Show"/>
                                 <connections>
                                     <action selector="showButtonPressed:" destination="H5X-oK-c6C" eventType="touchUpInside" id="xHI-pH-Dnf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvS-dA-0sp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvS-dA-0sp">
                                 <rect key="frame" x="155" y="96" width="104" height="30"/>
                                 <state key="normal" title="Toggle Passing"/>
                                 <connections>
                                     <action selector="passingTouchEventButtonPressed:" destination="H5X-oK-c6C" eventType="touchUpInside" id="svp-Cb-lUI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wg-0q-ywH">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wg-0q-ywH">
+                                <rect key="frame" x="151" y="433" width="112" height="30"/>
+                                <state key="normal" title="Show Card View"/>
+                                <connections>
+                                    <action selector="showCardView:" destination="H5X-oK-c6C" eventType="touchUpInside" id="BCq-Mq-Hz8"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9yK-9f-gSw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3wg-0q-ywH" firstAttribute="centerY" secondItem="VQu-6K-aBe" secondAttribute="centerY" id="NJG-ek-GMN"/>
                             <constraint firstItem="DvS-dA-0sp" firstAttribute="top" secondItem="Raq-T1-AQw" secondAttribute="bottom" constant="22" id="bpM-9x-WOL"/>
@@ -60,7 +67,6 @@
                             <constraint firstItem="Raq-T1-AQw" firstAttribute="centerX" secondItem="VQu-6K-aBe" secondAttribute="centerX" id="x05-7O-EvC"/>
                             <constraint firstItem="DvS-dA-0sp" firstAttribute="centerX" secondItem="VQu-6K-aBe" secondAttribute="centerX" id="xj0-x5-Ewf"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="9yK-9f-gSw"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item1" id="JrQ-Kv-Kqf"/>
                 </viewController>
@@ -76,7 +82,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b30-Br-91F">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b30-Br-91F">
                                 <rect key="frame" x="180" y="433" width="54" height="30"/>
                                 <state key="normal" title="Dismiss"/>
                                 <connections>
@@ -84,13 +90,13 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="TEI-Dn-yx8"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="b30-Br-91F" firstAttribute="centerY" secondItem="W6u-XK-Nf4" secondAttribute="centerY" id="E28-S0-45l"/>
                             <constraint firstItem="b30-Br-91F" firstAttribute="centerX" secondItem="W6u-XK-Nf4" secondAttribute="centerX" id="ceX-FD-cY1"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="TEI-Dn-yx8"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="8wf-I9-m9R" appends="YES" id="nYF-jG-t6E"/>
                         </connections>
@@ -106,4 +112,12 @@
             <point key="canvasLocation" x="1858" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

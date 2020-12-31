@@ -19,6 +19,9 @@
 		BE8B4843247C166E00E18413 /* BottomPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8B4842247C166E00E18413 /* BottomPresentationAnimator.swift */; };
 		BE8B4845247C16C300E18413 /* BottomPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8B4844247C16C300E18413 /* BottomPresentationDelegate.swift */; };
 		BE8B4847247C16F700E18413 /* BottomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8B4846247C16F700E18413 /* BottomPresentationController.swift */; };
+		BEDF8FFA259DD9E500E64AA6 /* CardPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF8FF8259DD9E500E64AA6 /* CardPresentationController.swift */; };
+		BEDF8FFB259DD9E500E64AA6 /* CardPresentationProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF8FF9259DD9E500E64AA6 /* CardPresentationProxy.swift */; };
+		BEDF9001259DDA3600E64AA6 /* UIApplication+statusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF9000259DDA3600E64AA6 /* UIApplication+statusBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		BE8B4842247C166E00E18413 /* BottomPresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPresentationAnimator.swift; sourceTree = "<group>"; };
 		BE8B4844247C16C300E18413 /* BottomPresentationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPresentationDelegate.swift; sourceTree = "<group>"; };
 		BE8B4846247C16F700E18413 /* BottomPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPresentationController.swift; sourceTree = "<group>"; };
+		BEDF8FF8259DD9E500E64AA6 /* CardPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPresentationController.swift; sourceTree = "<group>"; };
+		BEDF8FF9259DD9E500E64AA6 /* CardPresentationProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPresentationProxy.swift; sourceTree = "<group>"; };
+		BEDF9000259DDA3600E64AA6 /* UIApplication+statusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+statusBar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,8 @@
 		BE5230FB2479DD530029B18D /* FloatingView */ = {
 			isa = PBXGroup;
 			children = (
+				BEDF8FFF259DDA1D00E64AA6 /* Extensions */,
+				BEDF8FF7259DD9E500E64AA6 /* CardPresentation */,
 				BE8B4841247C164400E18413 /* BottomPresentation */,
 				BE5230FC2479DD530029B18D /* AppDelegate.swift */,
 				BE5230FE2479DD530029B18D /* SceneDelegate.swift */,
@@ -146,6 +154,23 @@
 				BE8B4846247C16F700E18413 /* BottomPresentationController.swift */,
 			);
 			path = BottomPresentation;
+			sourceTree = "<group>";
+		};
+		BEDF8FF7259DD9E500E64AA6 /* CardPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF8FF8259DD9E500E64AA6 /* CardPresentationController.swift */,
+				BEDF8FF9259DD9E500E64AA6 /* CardPresentationProxy.swift */,
+			);
+			path = CardPresentation;
+			sourceTree = "<group>";
+		};
+		BEDF8FFF259DDA1D00E64AA6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF9000259DDA3600E64AA6 /* UIApplication+statusBar.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,8 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDF9001259DDA3600E64AA6 /* UIApplication+statusBar.swift in Sources */,
 				BE5231012479DD530029B18D /* ViewController.swift in Sources */,
 				BE52312E2479DE800029B18D /* PresentedViewController.swift in Sources */,
+				BEDF8FFA259DD9E500E64AA6 /* CardPresentationController.swift in Sources */,
+				BEDF8FFB259DD9E500E64AA6 /* CardPresentationProxy.swift in Sources */,
 				BE5230FD2479DD530029B18D /* AppDelegate.swift in Sources */,
 				BE8B4845247C16C300E18413 /* BottomPresentationDelegate.swift in Sources */,
 				BE8B4847247C16F700E18413 /* BottomPresentationController.swift in Sources */,

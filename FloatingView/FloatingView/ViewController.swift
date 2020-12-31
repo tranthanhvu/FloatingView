@@ -10,7 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var bottomPresentionDelegate = BottomPresentationDelegate(isPassingTouchEvent: true)
+    @IBOutlet var toggleButton: UISwitch! {
+        didSet {
+            bottomPresentionDelegate.isPassingTouchEvent = toggleButton.isOn
+        }
+    }
+    
+    lazy var bottomPresentionDelegate: BottomPresentationDelegate = {
+        return BottomPresentationDelegate(isPassingTouchEvent: toggleButton.isOn)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +39,24 @@ class ViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
-    @IBAction func passingTouchEventButtonPressed(_ sender: Any) {
-        bottomPresentionDelegate.isPassingTouchEvent = !bottomPresentionDelegate.isPassingTouchEvent
+    @IBAction func showCardView(_ sender: Any) {
+        if let presented = self.presentedViewController {
+            presented.removeFromParent()
+        }
+        
+        let presentation = CardPresentationProxy()
+        
+        let vc = storyboard!.instantiateViewController(withIdentifier: "PresentedViewController")
+        vc.transitioningDelegate = presentation
+        vc.modalPresentationStyle = .custom
+        
+        vc.view.layer.cornerRadius = 10
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func toggleButtonPressed(_ sender: Any) {
+        toggleButton.isOn = !toggleButton.isOn
     }
 }
 
