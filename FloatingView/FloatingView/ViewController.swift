@@ -8,26 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
     
-    @IBOutlet var toggleButton: UISwitch! {
-        didSet {
-            bottomPresentionDelegate.isPassingTouchEvent = toggleButton.isOn
-        }
-    }
+    // MARK: - UI
+    @IBOutlet var toggleButton: UISwitch!
     
     lazy var bottomPresentionDelegate: BottomPresentationDelegate = {
         return BottomPresentationDelegate(isPassingTouchEvent: toggleButton.isOn)
     }()
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func showButtonPressed(_ sender: Any) {
-        if let presented = self.presentedViewController {
-            presented.removeFromParent()
+    // MARK: - Funcs
+    @IBAction func toggleButtonPressed(_ sender: Any) {
+//        toggleButton.setOn(!toggleButton.isOn, animated: true)
+        bottomPresentionDelegate.isPassingTouchEvent = toggleButton.isOn
+    }
+    
+    @IBAction func showTouchPassThroughPresentation(_ sender: Any) {
+        if self.presentedViewController != nil {
+            return
         }
         
         let vc = storyboard!.instantiateViewController(withIdentifier: "PresentedViewController")
@@ -39,13 +43,12 @@ class ViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
-    @IBAction func showCardView(_ sender: Any) {
-        if let presented = self.presentedViewController {
-            presented.removeFromParent()
+    @IBAction func showCardPresentation(_ sender: Any) {
+        if self.presentedViewController != nil {
+            return
         }
         
         let presentation = CardPresentationProxy()
-        
         let vc = storyboard!.instantiateViewController(withIdentifier: "PresentedViewController")
         vc.transitioningDelegate = presentation
         vc.modalPresentationStyle = .custom
@@ -55,8 +58,13 @@ class ViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
-    @IBAction func toggleButtonPressed(_ sender: Any) {
-        toggleButton.isOn = !toggleButton.isOn
+    @IBAction func showNormalPresentation(_ sender: Any) {
+        if self.presentedViewController != nil {
+            return
+        }
+        
+        let vc = storyboard!.instantiateViewController(withIdentifier: "PresentedViewController")
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

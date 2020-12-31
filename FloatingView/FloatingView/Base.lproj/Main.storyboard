@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="aJT-63-7QB">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IgI-nk-kfM" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TB" automaticallyAdjustsScrollViewInsets="NO" id="IgI-nk-kfM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kLl-gR-N5y">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -26,51 +26,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yIV-x9-yC4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="232" y="134"/>
-        </scene>
-        <!--Demo-->
-        <scene sceneID="4Hq-cH-bqy">
-            <objects>
-                <viewController storyboardIdentifier="ViewController" id="H5X-oK-c6C" customClass="ViewController" customModule="FloatingView" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VQu-6K-aBe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvS-dA-0sp">
-                                <rect key="frame" x="151" y="225" width="104" height="30"/>
-                                <state key="normal" title="Toggle Passing"/>
-                                <connections>
-                                    <action selector="passingTouchEventButtonPressed:" destination="H5X-oK-c6C" eventType="touchUpInside" id="svp-Cb-lUI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wg-0q-ywH">
-                                <rect key="frame" x="151" y="433" width="112" height="30"/>
-                                <state key="normal" title="Show Card View"/>
-                                <connections>
-                                    <action selector="showCardView:" destination="H5X-oK-c6C" eventType="touchUpInside" id="BCq-Mq-Hz8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Raq-T1-AQw">
-                                <rect key="frame" x="50" y="103" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show"/>
-                                <connections>
-                                    <action selector="showButtonPressed:" destination="H5X-oK-c6C" eventType="touchUpInside" id="xHI-pH-Dnf"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="9yK-9f-gSw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="3wg-0q-ywH" firstAttribute="centerY" secondItem="VQu-6K-aBe" secondAttribute="centerY" id="NJG-ek-GMN"/>
-                            <constraint firstItem="3wg-0q-ywH" firstAttribute="centerX" secondItem="VQu-6K-aBe" secondAttribute="centerX" id="ldY-Es-vJf"/>
-                            <constraint firstItem="DvS-dA-0sp" firstAttribute="centerX" secondItem="VQu-6K-aBe" secondAttribute="centerX" id="xj0-x5-Ewf"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Demo" id="o6H-ep-Frz"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D04-Ft-PNt" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3714" y="244"/>
         </scene>
         <!--Presented View Controller-->
         <scene sceneID="1FF-ui-8F1">
@@ -112,12 +67,12 @@
         <!--Demo-->
         <scene sceneID="dPy-Y5-cH2">
             <objects>
-                <tableViewController id="Mff-ou-7pn" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ViewController" id="Mff-ou-7pn" customClass="ViewController" customModule="FloatingView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="wfC-VY-wLZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <sections>
-                            <tableViewSection headerTitle="Passthrough touch" footerTitle="The layout should be recalculated as soon as rotating your device." id="c5a-J8-LbO">
+                            <tableViewSection headerTitle="Touch Pass Through" footerTitle="The layout should be recalculated as soon as rotating your device." id="c5a-J8-LbO">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="I9O-41-gW4">
                                         <rect key="frame" x="20" y="55.5" width="374" height="44"/>
@@ -128,8 +83,11 @@
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5bd-tW-mqN">
                                                     <rect key="frame" x="305" y="6.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="toggleButtonPressed:" destination="Mff-ou-7pn" eventType="valueChanged" id="yS8-7s-B8g"/>
+                                                    </connections>
                                                 </switch>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow passthrough touch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjY-ye-q5g">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow touch pass through" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjY-ye-q5g">
                                                     <rect key="frame" x="20" y="11.5" width="277" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -155,6 +113,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fem-hq-GWp">
                                                     <rect key="frame" x="20" y="0.0" width="334" height="44"/>
                                                     <state key="normal" title="Present"/>
+                                                    <connections>
+                                                        <action selector="showTouchPassThroughPresentation:" destination="Mff-ou-7pn" eventType="touchUpInside" id="rpV-Xe-7uM"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -179,6 +140,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKr-Ie-ZV8">
                                                     <rect key="frame" x="20" y="0.0" width="334" height="44"/>
                                                     <state key="normal" title="Present"/>
+                                                    <connections>
+                                                        <action selector="showCardPresentation:" destination="Mff-ou-7pn" eventType="touchUpInside" id="cbB-7q-pz2"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -203,6 +167,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGk-7I-bDJ">
                                                     <rect key="frame" x="20" y="0.0" width="334" height="44"/>
                                                     <state key="normal" title="Present"/>
+                                                    <connections>
+                                                        <action selector="showNormalPresentation:" destination="Mff-ou-7pn" eventType="touchUpInside" id="s9b-vL-N4b"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -222,6 +189,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Demo" id="meX-AA-VEu"/>
+                    <connections>
+                        <outlet property="toggleButton" destination="5bd-tW-mqN" id="wWl-3c-AP5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4V-Qz-X0d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,7 +200,7 @@
         <!--Item1-->
         <scene sceneID="RDA-wQ-nfv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pyO-aE-YUt" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NV" automaticallyAdjustsScrollViewInsets="NO" id="pyO-aE-YUt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item1" id="JrQ-Kv-Kqf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9RQ-lx-Exa">
@@ -248,9 +218,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
