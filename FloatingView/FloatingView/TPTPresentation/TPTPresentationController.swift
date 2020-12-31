@@ -1,5 +1,5 @@
 //
-//  BottomPresentationController.swift
+//  TPTPresentationController.swift
 //  FloatingView
 //
 //  Created by Yoyo on 5/25/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BottomPresentationController: UIPresentationController {
+class TPTPresentationController: UIPresentationController {
     
     var isPassingTouchEvent = false
     var height: CGFloat = 0

@@ -13,8 +13,8 @@ class ViewController: UITableViewController {
     // MARK: - UI
     @IBOutlet var toggleButton: UISwitch!
     
-    lazy var bottomPresentionDelegate: BottomPresentationDelegate = {
-        return BottomPresentationDelegate(isPassingTouchEvent: toggleButton.isOn)
+    lazy var tptPresentionProxy: TPTPresentationProxy = {
+        return TPTPresentationProxy(isPassingTouchEvent: toggleButton.isOn)
     }()
     
     // MARK: - Life cycle
@@ -25,8 +25,7 @@ class ViewController: UITableViewController {
     
     // MARK: - Funcs
     @IBAction func toggleButtonPressed(_ sender: Any) {
-//        toggleButton.setOn(!toggleButton.isOn, animated: true)
-        bottomPresentionDelegate.isPassingTouchEvent = toggleButton.isOn
+        tptPresentionProxy.isPassingTouchEvent = toggleButton.isOn
     }
     
     @IBAction func showTouchPassThroughPresentation(_ sender: Any) {
@@ -35,7 +34,7 @@ class ViewController: UITableViewController {
         }
         
         let vc = storyboard!.instantiateViewController(withIdentifier: "PresentedViewController")
-        vc.transitioningDelegate = bottomPresentionDelegate
+        vc.transitioningDelegate = tptPresentionProxy
         vc.modalPresentationStyle = .custom
         
         vc.view.layer.cornerRadius = 10
